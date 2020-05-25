@@ -1,0 +1,27 @@
+{
+  "name": "hello-blockstack",
+  "private": true,
+  "scripts": {
+    "build": "poi --prod",
+    "dev": "poi --serve"
+  },
+  "dependencies": {
+    "@blockstack/connect": "^2.7.2",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "blockstack": "^19.2.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "@egoist/snackbar": "^1.2.2",
+    "@poi/plugin-pwa": "^12.0.2",
+    "@poi/plugin-typescript": "^12.0.1",
+    "poi": "^12.4.2",
+    "typescript": "^3.2.1",
+    "bootstrap": "^4.3.1",
+    "workbox-window": "^4.3.1"
+  }
+}
