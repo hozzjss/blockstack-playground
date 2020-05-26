@@ -1,11 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import Profile from "./Profile";
 import SignIn from "./Signin";
 import { UserSession, AppConfig } from "blockstack";
 import { Connect, AuthOptions } from "@blockstack/connect";
 import { UserData } from "blockstack/lib/auth/authApp";
+import { Switch, Route } from "react-router-dom";
 
-const appConfig = new AppConfig();
+const appConfig = new AppConfig(["store_write", "publish_data"]);
 const userSession = new UserSession({ appConfig: appConfig });
 
 interface IState {
@@ -49,7 +50,18 @@ const App: React.FC = () => {
           {!userData ? (
             <SignIn />
           ) : (
-            <Profile userData={userData} handleSignOut={handleSignOut} />
+            <Switch>
+              <Route
+                path="/:username?"
+                render={(routeProps) => (
+                  <Profile
+                    userData={userData}
+                    handleSignOut={handleSignOut}
+                    {...routeProps}
+                  />
+                )}
+              />
+            </Switch>
           )}
         </div>
       </div>

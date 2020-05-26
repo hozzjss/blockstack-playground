@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build": "poi --prod",
-    "dev": "poi --serve"
+    "dev": "poi --serve",
+    "start": "poi --serve"
   },
   "dependencies": {
     "@blockstack/connect": "^2.7.2",

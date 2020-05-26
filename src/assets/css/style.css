@@ -7,23 +7,23 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #f4f4fc;
+  text-align: center;
+  background-color: #191b22;
 }
 body {
-  color: #3700ff;
-  text-align: center;
+  color: #fff;
 }
 .hide {
   display: none;
 }
 .landing-heading {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Lato", Sans-Serif;
   font-weight: 400;
 }
 
 /* Buttons */
 .btn {
-  font-family: "Source Code Pro", monospace;
+  font-family: "Lato", Sans-Serif;
   padding: 0.5625rem 2.5rem;
   font-size: 0.8125rem;
   font-weight: 400;
@@ -33,9 +33,9 @@ body {
   user-select: none;
 }
 .btn-lg {
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   padding: 0.6875rem 3.4375rem;
-  line-height: 1.75rem;
+  line-height: 2.5rem;
 }
 .btn:focus,
 .btn:active:focus,
@@ -43,19 +43,16 @@ body {
   outline: none;
 }
 .btn-primary {
-  background-color: #3700ff;
-  border: 1px solid #3700ff;
+  color: #fff;
+  border: 1px solid #2c96ff;
+  background-color: #2c96ff;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
   color: #fff;
-  border: 1px solid #270f34;
-  background-color: #270f34;
-}
-.navbar {
-  background-color: #3700ff !important;
-  border-radius: 0;
+  border: 1px solid #1a6ec0;
+  background-color: #1a6ec0;
 }
 
 /* Avatar */
@@ -65,14 +62,19 @@ body {
 }
 .avatar-section {
   margin-bottom: 25px;
+  display: flex;
+  text-align: left;
+}
+.username {
+  margin-left: 20px;
 }
 
 /* Scaffolding */
 .site-wrapper {
   display: table;
   width: 100%;
-  height: 90% !important;
-  min-height: 90vh !important;
+  height: 100vh;
+  min-height: 100%;
 }
 .site-wrapper-inner {
   display: flex;
@@ -81,7 +83,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
-  height: 90%;
+  height: 100vh;
 }
 .panel-authed {
   padding: 0 0 0 0;
@@ -106,8 +108,24 @@ body {
 input,
 textarea {
   color: #000;
+  padding: 10px;
 }
-input,
-textarea {
-  color: #000;
+.input-status {
+  width: 100%;
+  height: 70px;
+  border-radius: 6px;
+}
+.new-status {
+  text-align: right;
+}
+
+/* Statuses */
+.statuses {
+  padding-top: 30px;
+}
+.status {
+  margin: 15px 0px;
+  padding: 20px;
+  background-color: #2e2e2e;
+  border-radius: 6px;
 }

@@ -19,6 +19,14 @@ module.exports = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Headers': '*',
       'Access-Control-Allow-Methods': '*'
+    },
+    proxy: {
+      '/*.*': {
+        target: 'http://localhost:4000/',
+        router: function (req) {
+          req.url = 'index.html'
+        }
+      }
     }
   }
 }
